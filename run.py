@@ -15,7 +15,7 @@ if __name__ == "__main__":
                     i = i.replace('\n','')
                     # print(i)
                     # print(len(i))
-                    download.download(i,10,x[0])
+                    download.download(i,1000,x[0])
                 else:
                     s =s + 1
 
