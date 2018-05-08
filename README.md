@@ -8,7 +8,7 @@
 - Geckodriver
 
 ## Usage
-- python3 run.py --queries_file_name="example.csv"
+- python3 run.py --queries_file_name="examples.csv"
 
 ## Format of csv file (see example.cvs)
 [category name1], [query1], [query2], [query3]  
