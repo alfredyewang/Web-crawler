@@ -5,11 +5,14 @@ import sys
 import time
 import urllib.request
 import socket
-# socket.setdefaulttimeout(5)
+socket.setdefaulttimeout(50)
 os.environ["PATH"] += os.pathsep + os.getcwd()
-download_path = "./images/"
 
-def download(keyword,number):
+
+def download(keyword,number,category):
+	if not os.path.exists("./images/{}".format(category)):
+		os.system("mkdir ./images/{}".format(category))
+	download_path = "./images/{}/".format(category)
 	searchtext = keyword
 	# num_requested = number
 	number_of_scrolls = number / 400 + 1
@@ -69,9 +72,12 @@ if __name__ == "__main__":
 						help='')
 	parser.add_argument("--number", type=int, nargs=1,
 						help='')
+	parser.add_argument("--category", type=str, nargs=1,
+						help='')
 	args = parser.parse_args()
 	print(args.keyword[0])
 	print(args.number[0])
 
+	download_path = "./images/{}/".format(args.category[0])
 
-	download(args.keyword[0],args.number[0])
+	download(args.keyword[0],args.number[0],args.category[0])
