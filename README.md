@@ -18,40 +18,54 @@ PS: There is a spcae after comma.
 ## Images directory structure
 
 ```
-coco
-|_ coco_train2014
-|  |_ <im-1-name>.jpg
-|  |_ ...
-|  |_ <im-N-name>.jpg
-|_ coco_val2014
-|_ ...
-|_ annotations
-   |_ instances_train2014.json
-   |_ ...
+images
+|Category name1
+|  |_Query1
+|  |    |_00001.jpg
+|  |    |_00002.jpg
+|  |_Query2
+|  |    |_00001.jpg
+|  |    |_00002.jpg
+|Category name2
+|  |_Query1
+|  |    |_00001.jpg
+|  |    |_00002.jpg
+|  |_Query2
+|  |    |_00001.jpg
+|  |    |_00002.jpg
 ```
 
-
-
-
-'''
-images
-|Category name
-|  |_ Query1
-|  |    |_ 00001.jpg
-|  |    |_ 00002.jpg
-|  |_ Query2
-|_ |_   |
-- 
-|_ ...
-|_ annotations
-   |_ instances_train2014.json
-   |_ ...
-'''
-
-## Update: rename.sh bash script
-After you run run.py file with your own csv and satisfy your the result. Please run rename.sh file to rename the image.
+## Update: Category csv file and rename.sh script
+After you run run.py with your own csv and satisfy your the result. Please run rename.sh file to rename the image. It will give each image a unique ID. The format should be <CategoryID>_<ImageID>.jpg
 
 ## Usage of rename.sh
 bash rename.sh
+
+## Images directory structure after you rename images
+
+```
+images
+|Category name1
+|  |_Query1
+|  |    |_00001.jpg
+|  |    |_00002.jpg
+|  |_Query2
+|  |    |_00001.jpg
+|  |    |_00002.jpg
+|  |_Category name1_all
+|  |    |_00001_00001.jpg
+|  |    |_00001_00002.jpg
+
+|Category name2
+|  |_Query1
+|  |    |_00001.jpg
+|  |    |_00002.jpg
+|  |_Query2
+|  |    |_00001.jpg
+|  |    |_00002.jpg
+|  |_Category name2_all
+|  |    |_00002_00001.jpg
+|  |    |_00002_00002.jpg
+```
 
 
