@@ -17,6 +17,22 @@ PS: There is a spcae after comma.
 
 ## Images directory structure
 
+```
+coco
+|_ coco_train2014
+|  |_ <im-1-name>.jpg
+|  |_ ...
+|  |_ <im-N-name>.jpg
+|_ coco_val2014
+|_ ...
+|_ annotations
+   |_ instances_train2014.json
+   |_ ...
+```
+
+
+
+
 '''
 images
 |Category name
