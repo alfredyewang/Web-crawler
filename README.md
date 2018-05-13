@@ -16,6 +16,8 @@
 PS: There is a spcae after comma.
 
 ## Images directory structure
+
+'''
 images
 |Category name
 |  |_ Query1
@@ -28,7 +30,7 @@ images
 |_ annotations
    |_ instances_train2014.json
    |_ ...
-
+'''
 
 ## Update: rename.sh bash script
 After you run run.py file with your own csv and satisfy your the result. Please run rename.sh file to rename the image.
