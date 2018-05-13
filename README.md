@@ -36,7 +36,7 @@ images
 ```
 
 ## Update: Category csv file and rename.sh script
-After you run run.py with your own csv and satisfy your the result. Please run rename.sh file to rename the image. It will give each image a unique ID. The format should be "<CategoryID>_<ImageID>.jpg"
+After you run run.py with your own csv and satisfy your the result. Please run rename.sh file to rename the image. It will give each image a unique ID. The format should be ```<CategoryID>_<ImageID>.jpg```
 
 ## Usage of rename.sh
 bash rename.sh
